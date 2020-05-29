@@ -1,1 +1,0 @@
-This Server is made by hamin lee
