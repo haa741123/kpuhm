@@ -1,4 +1,20 @@
+//13. 문자와 문자열 13-6
+
+#include <stdio.h>
+
+int main(void) {
+	char munja;
+
+	printf("문자 입력 : ");
+	munja = getchar();
+
+	printf("문자 출력 : ");
+	putchar(munja);
+	return 0;
+}
+
 //13. 문자와 문자열 13-9
+
 #include <stdio.h>
 #include <conio.h>
 
