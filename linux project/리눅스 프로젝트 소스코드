@@ -23,9 +23,10 @@ then
 echo -n "메세지를 입력하시오 : "
 read message
 sudo wall "$message"
+
+fi
 # 종료
-else
-if [ $setting==4 ]
+elif [ $setting==4 ]
 then
 exit 0
 fi
