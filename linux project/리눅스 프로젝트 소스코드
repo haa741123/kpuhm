@@ -17,37 +17,15 @@ echo -n "1. 모든 사용자에게 메세지 전달(ADMIN MODE)\n
 
 read setting
  
-elif [ $setting==1 ]
+elif [ $setting==1 ];
 then
 
 echo -n "메세지를 입력하시오 : "
 read message
 sudo wall "$message"
 
-
- 
-# 지정 사용자 메세지
- 
-if [ $setting==2 ]
-then
-
-echo '2. 특정 사용자에게 메일 전송'
-
-echo "메일을 받을 사람과 같은 시스템인가요? "
-read answer
-
-elif [[ $answer = [Yy]* ]]
-then
-        echo "사용자 ID: "
-        read email
-        talk $email
-else
-        echo "사용자 ID@호스트명: "
-        read emails
-        talk $emails
-
 # 종료
-elif [ $setting==2 ]
+elif [ $setting==2 ];
 then
 exit 0
 fi
