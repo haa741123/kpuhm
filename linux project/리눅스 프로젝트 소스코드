@@ -39,20 +39,11 @@ sudo wall "$message"
 elif [ $setting -eq 2 ]
 then
 echo "2. 특정 사용자에게 메일 전송"
-echo -n "메일을 받을 사람과 같은 시스템인가요?(Y,N)
-:"
-read answer
 
-if [ $answer = Y ]
-then
         echo -n "사용자 ID: "
         read email
         talk $email
-else
-        echo -n "사용자 ID@호스트명: "
-        read emails
-        talk $emails
-fi
+
 
 # 메세지 수신상태 확인
 elif [ $setting -eq 3 ]
