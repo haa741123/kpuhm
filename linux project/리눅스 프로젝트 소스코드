@@ -23,6 +23,26 @@ echo -n "메세지를 입력하시오 : "
 read message
 sudo wall "$message"
 
+# 특정 사용자 메세지
+elif [ $setting -eq 2 ]
+echo '2. 특정 사용자에게 메일 전송'
+
+echo "메일을 받을 사람과 같은 시스템인가요? "
+read answer
+
+if [[ $answer = [Yy]* ]]
+then
+        echo "사용자 ID: "
+        read email
+        talk $email
+else
+        echo "사용자 ID@호스트명: "
+        read emails
+        talk $emails
+fi
+
+
+
 # 종료
 elif [ $setting -eq 4 ]
 then
