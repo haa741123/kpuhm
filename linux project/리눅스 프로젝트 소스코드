@@ -9,9 +9,9 @@ echo -n "1. 모든 사용자에게 메세지 전달(ADMIN MODE)\n
 3. 현재 메세지 수신 설정을 확인 \n"
 read setting
 
-if [ ${setting} == 1 ];then
+if [ $setting == 1 ];then
 
-echo "메세지를 입력하시오 : "
+echo -n "메세지를 입력하시오 : "
 read message
 sudo wall "$message"
 
