@@ -1,3 +1,5 @@
+#!/bin/bash
+
 echo "메일 전송 프로그램입니다."
 echo "번호를 입력하세요"
 echo -e "1. 모든 사용자에게 메세지 전달(ADMIN MODE)\n
@@ -6,3 +8,8 @@ echo -e "1. 모든 사용자에게 메세지 전달(ADMIN MODE)\n
 
 3. 현재 메세지 수신 설정을 확인 \n"
 
+if [ ${REPLY} = 1 ];then
+
+   
+
+ fi 
