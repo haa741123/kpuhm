@@ -17,7 +17,7 @@ echo -n "1. 모든 사용자에게 메세지 전달(ADMIN MODE)\n
 
 read setting
  
-if [ $setting==1 ];
+if [ $setting==1 ]
 then
 
 echo -n "메세지를 입력하시오 : "
@@ -25,7 +25,7 @@ read message
 sudo wall "$message"
 
 # 종료
-elif [ $setting==2 ];
+elif [ $setting==2 ]
 then
 exit 0
 fi
