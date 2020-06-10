@@ -10,7 +10,7 @@ echo -n "1. 모든 사용자에게 메세지 전달(ADMIN MODE)\n
 
 if [ ${REPLY} = 1 ];then
 
-read -n 1 -p "메세지를 입력하세요:" message
+echo -n "메세지를 입력하시오 : "
 sudo wall "$message"
 
  fi
