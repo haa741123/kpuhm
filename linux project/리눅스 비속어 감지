@@ -1,7 +1,5 @@
 #!/bin/bash
 # 메인 메뉴
-while :
-do
 cat << "EOF"
 #       ### #     # #     # #     #    #     #    #    ### #           #####  #     #  #####  ####### ####### #     # 
 #        #  ##    # #     #  #   #     ##   ##   # #    #  #          #     #  #   #  #     #    #    #       ##   ## 
@@ -49,10 +47,12 @@ read chat
 
 if  [[ "$chat" =~ "씨발" ]]
 then
-echo "욕 감지!"
+echo "비속어 감지!
+프로그램을 종료합니다"
 
 else
 talk $emails $chat
+fi
 
 # 메세지 수신상태 확인
 elif [ $setting -eq 3 ]
@@ -68,4 +68,4 @@ then
 echo "메세지 수신이 거부 상태입니다!"
 fi
 fi
-done
+
