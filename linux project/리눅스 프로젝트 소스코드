@@ -34,23 +34,24 @@ sudo wall "$message"
 elif [ $setting -eq 2 ]
 then
 echo "<특정 사용자에게 메일 전송>"
-echo "(1) Talk / (2) Write 
+echo -n "(1) Talk / (2) Write 
 :"
 read ans
 
 if [ $ans -eq 1 ]
 then
- echo "<talk 명령어>"
+ echo "<Talk 명령어>"
  echo "사용자의 hostname은 다음과 같습니다."
  hostname
  echo ""
- echo "수신자와 같은 시스템인가요?(Y/N)"
-
+ echo -n "수신자와 같은 시스템인가요?(Y/N)
+:"
  read answer
 
 if [[ $answer = [Yy]* ]]
 then
- echo "수신자 ID: "
+ echo -n "수신자 ID
+:"
 
 else
  echo "수신자 ID@hostname"
@@ -62,9 +63,10 @@ talk id1
 
 #write 명령어 사용
 elif [ $ans -eq 2 ]
-echo "<write 명령어>"
+echo "<Write 명령어>"
 then
- echo -n "수신자 ID: "
+ echo -n "수신자 ID
+:"
  read id2
 # 욕설감지
 echo -n "*비속어 사용시 프로그램이 종료됩니다*
