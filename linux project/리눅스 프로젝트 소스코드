@@ -34,7 +34,8 @@ sudo wall "$message"
 elif [ $setting -eq 2 ]
 then
 echo "<특정 사용자에게 메일 전송>"
-echo "(1) Talk / (2) Write"
+echo "(1) Talk / (2) Write
+:"
 read ans
 
 if [ $ans -eq 1 ]
