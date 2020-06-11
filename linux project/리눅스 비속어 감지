@@ -39,10 +39,10 @@ then
 echo "2. 특정 사용자에게 메일 전송"
 
 echo -n "사용자 ID: "
-read email
+read id
 
 # 욕설감지
-echo -n "체팅을 입력하시오 :"
+echo -n "메세지를 입력하시오 :"
 read chat
 
 if  [[ "$chat" =~ "씨발" ]]
@@ -51,7 +51,8 @@ echo "비속어 감지!
 프로그램을 종료합니다"
 
 else
-talk $emails $chat
+write $id 
+$chat
 fi
 
 # 메세지 수신상태 확인
