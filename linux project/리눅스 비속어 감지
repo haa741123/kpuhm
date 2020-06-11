@@ -36,13 +36,14 @@ sudo wall "$message"
 # 특정 사용자 메세지
 elif [ $setting -eq 2 ]
 then
-echo "2. 특정 사용자에게 메일 전송"
+echo "특정 사용자에게 메일 전송"
 
 echo -n "사용자 ID: "
 read id
 
 # 욕설감지
-echo -n "메세지를 입력하시오 :"
+echo -n "*비속어 사용시 프로그램이 종료됩니다*
+메세지를 입력하시오 :"
 read chat
 
 if  [[ "$chat" =~ "씨발" ]]
